@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav {
+    background-color: rgb(168,137,82);
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav .meni{
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 25px;
+}
+
+.meni ul {
+    display: inline-flex;
+}
+
+.meni ul li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.meni ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 8px 15px;
+}
+
+.meni ul li a:hover {
+    background-color: #fff;
+    color:rgb(168,137,82);
+    border-radius: 10px;
+} 
+
+#naslovna{
+    background-image: url(../img/naslovna.jpg);
+    height: 105vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.tekst{
+    text-align: center;
+    padding-top: 200px;
+    font-size: 200%;
+    font-weight: 800;
+    color:rgb(168,137,82);
+}
+
+.tekst button{
+    color: rgb(168,137,82);
+    background-color: #fff;
+    font-size: 40%;
+    font-weight: 800;
+    padding: 9px;
+    border-radius: 15px;
+    border: 1px dashed rgb(168,137,82);
+    cursor: pointer;
+}
+
+.tekst button:hover {
+    background-color: rgb(116, 185, 218);
+}
+
+@media all and (max-width:600px){
+    nav .meni{
+        padding: 0 5px;
+    }
+    .meni ul li {
+        margin-left: 3px;
+    }
+
+    .meni ul li a {
+        font-size: 10px;
+
+    }
+}
+

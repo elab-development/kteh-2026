@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav {
+    background-color: rgb(168,137,82);
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav .meni{
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.meni ul {
+    display: inline-flex;
+}
+
+.meni ul li {
+    list-style: none;
+    margin-left: 8px;
+}
+
+.meni ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 15px;
+}
+
+.meni ul li a:hover {
+    background-color: white;
+    color:rgb(168,137,82);
+    border-radius: 10px;
+} 
+
+.oNama img{
+    height: 450px;
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(168,137,82);
+}
+
+.paragraf{
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+    color: rgb(168,137,82);
+}
+
+
+@media all and (max-width:600px){
+
+    nav .meni{
+        padding: 0 5px;
+    }
+    .meni ul li {
+        margin-left: 3px;
+    }
+
+    .meni ul li a {
+        font-size: 10px;
+    }
+
+    .oNama img{
+        height: 200px;
+        width: 80%;
+        display: block;
+        margin: auto;
+    }
+}

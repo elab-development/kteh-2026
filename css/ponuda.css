@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+nav {
+    background-color: rgb(168,137,82);
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav .meni{
+    max-width: 1250px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.meni ul {
+    display: inline-flex;
+}
+
+.meni ul li {
+    list-style: none;
+    margin-left: 8px;
+}
+
+.meni ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 15px;
+}
+
+.meni ul li a:hover {
+    background-color: white;
+    color:rgb(168,137,82);
+    border-radius: 10px;
+} 
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(168,137,82);
+}
+
+.ponuda{
+    width: 75%;
+    margin:auto;
+    text-align:center;
+}
+
+h3{
+    font-weight: 800;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: rgb(51, 34, 3);
+}
+
+h4{
+    padding-top: 100px;
+    font-size: 130%;
+    font-weight: 900;
+}
+
+.ponuda .letovanja,
+.ponuda .ngd{
+  padding: 5%;
+  background-color: rgb(168,137,82);
+  border-radius: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.ponuda .letovanja .slike,
+.ponuda .ngd .slike{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0);
+}
+
+.slika{
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.slika:hover{
+    color: white;
+    opacity: 0.7;
+}
+
+#letovanje1{
+    background-image: url(../img/santorini.jpg);
+}
+
+#letovanje2{
+    background-image: url(../img/nica.jpg);
+}
+
+#letovanje3{
+    background-image: url(../img/alanja.jpg);
+}
+
+#ngd1{
+    background-image: url(../img/kolmar.jpg);
+}
+
+#ngd2{
+    background-image: url(../img/bec.jpg);
+}
+
+#ngd3{
+    background-image: url(../img/budimpesta.jpg);
+}
+
+@media all and (max-width:600px){
+    nav .meni{
+        padding: 0 5px;
+    }
+    .meni ul li {
+        margin-left: 3px;
+    }
+
+    .meni ul li a {
+        font-size: 10px;
+    }
+
+    .ponuda .letovanja .slike,
+    .ponuda .ngd .slike{
+        grid-template-columns: auto;
+    }
+
+    .slika{
+        width: 200px;
+    }
+}
+
+@media all and (max-width:800px){
+    nav .meni{
+        padding: 0 5px;
+    }
+    .meni ul li {
+        margin-left: 3px;
+    }
+
+    .meni ul li a {
+        font-size: 10px;
+
+    }
+
+    .ponuda .letovanja .slike,
+    .ponuda .ngd .slike{
+        grid-template-columns: auto;
+    }
+}
