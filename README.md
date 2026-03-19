@@ -64,7 +64,15 @@ git clone https://github.com/elab-development/kteh-2026.git
 
 ---
 
-### 2. Pregled dostupnih grana
+### 2. Prelazak u folder projekta
+
+```bash
+cd kteh-2026
+```
+
+---
+
+### 3. Pregled dostupnih grana
 
 ```bash
 git branch -a
@@ -72,7 +80,7 @@ git branch -a
 
 ---
 
-### 3. Prelazak na željenu vežbu
+### 4. Prelazak na željenu vežbu
 
 ```bash
 git checkout naziv-grane
@@ -86,7 +94,7 @@ git checkout vezbe-03-kostur
 
 ---
 
-### 4. Ažuriranje repozitorijuma
+### 5. Ažuriranje repozitorijuma
 
 ```bash
 git pull
