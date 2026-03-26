@@ -106,5 +106,5 @@ console.log(voce.map(function(element){
 
 // IIFE koncept nad anonimnim funkcijama
 (function(name){
-    console.log("Pozdrav iz IIFE sa sajta ", name)
-}(naziv));
+    console.log("Pozdrav iz IIFE sa sajta ", name);
+})(naziv);
