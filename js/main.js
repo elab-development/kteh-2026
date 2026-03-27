@@ -83,28 +83,4 @@ const mnozenje = function(a,b){
     return a*b;
 }
 
-// Arrow funkcije  () => {}
-const oduzmi = (b1,b2) => {
-    return b1-b2;
-}
-console.log(oduzmi(10,7));
 
-const kvadrat = x => {
-    return x*x;
-}
-console.log(kvadrat(5))
-
-//primer iz skripte
-console.log(voce.map(v => v.length));
-
-console.log("Drugi nacin");
-
-console.log(voce.map(function(element){
-    return element.length;
-}));
-
-
-// IIFE koncept nad anonimnim funkcijama
-(function(name){
-    console.log("Pozdrav iz IIFE sa sajta ", name);
-})(naziv);
