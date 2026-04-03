@@ -83,4 +83,116 @@ const mnozenje = function(a,b){
     return a*b;
 }
 
+// --- GLOBALNI OPSEG ---
+var globalnaVar = "Ja sam var";
+let globalnaLet = "Ja sam let";
+const globalnaConst = "Ja sam const";
+
+if (true) {
+    // --- BLOK OPSEG (Unutar zagrada) ---
+    var unutarVar = "VAR: Ja sam pobegao iz bloka!"; 
+    let unutarLet = "LET: Ja sam ostao u bloku.";
+    const unutarConst = "CONST: I ja sam ostao u bloku.";
+
+    console.log("Unutar bloka:");
+    console.log(unutarVar);   // Radi
+    console.log(unutarLet);   // Radi
+    console.log(unutarConst); // Radi
+
+    globalnaLet = "Novi Let";       // DOZVOLJENO: let se može menjati
+    // globalnaConst = "Novi Const"; 
+}
+
+console.log("--- VAN BLOKA ---");
+
+console.log(unutarVar); 
+// console.log(unutarLet);   // GREŠKA: ReferenceError - let je vidljiv samo unutar {}
+// console.log(unutarConst); // GREŠKA: ReferenceError - const je vidljiv samo unutar {}
+
+console.log("Globalne posle bloka:", globalnaLet); // Ispisuje "Novi Let"
+console.log("Globalne posle bloka:", globalnaConst); // Ispisuje "Ja sam const"
+console.log("Globalne posle bloka:", globalnaVar); // Ispisuje "Ja sam var"
+
+
+// Arrow funkcije  () => {} 
+const oduzmi = (b1,b2) => { 
+    return b1-b2;
+}
+console.log(oduzmi(10,7));
+
+const kvadrat = x => {
+    return x*x;
+}
+console.log(kvadrat(5))
+
+//primer iz skripte
+console.log(voce.map(v => v.length));
+
+// IIFE koncept nad anonimnim funkcijama - 
+(function(name){
+    console.log("Pozdrav iz IIFE sa sajta ", name)
+}(naziv));
+
+// --- 1. SELEKTORI (DOM Manipulation) ---
+
+// getElementById za naslov
+const naslov = document.getElementById("naslov-kontakta");
+console.log(naslov);
+
+// querySelector za formu 
+const forma = document.querySelector("#kontakt");
+console.log(forma);
+
+// querySelectorAll - vraća NodeList svih inputa
+const sviInputi = document.querySelectorAll("input");
+console.log(sviInputi);
+
+// getElementsByTagName - vraća HTMLCollection svih inputa
+const inputiTag = document.getElementsByTagName("input");
+console.log(inputiTag);
+
+// Promena HTML sadržaja 
+naslov.textContent = "Pošaljite nam poruku";
+
+// Promena CSS propertija kroz JS
+naslov.style.color = "brown";
+naslov.style.textTransform = "uppercase";
+
+// Postavljanje atributa kroz JS 
+const poljeIme = document.getElementById("ime");
+poljeIme.setAttribute("placeholder", "Unesite vaše ime...");
+
+
+// --- 3. EVENT LISTENERI ---
+const tabelaBody = document.querySelector("#tabela-korisnika tbody");
+
+// EventListener za dodavanje korisnika
+forma.addEventListener("submit", function(event) {
+    // Sprečavamo osvežavanje stranice
+    event.preventDefault();
+
+    // Uzimanje vrednosti iz polja
+    const ime = document.getElementById("ime").value;
+    const email = document.getElementById("email").value;
+    const poruka = document.getElementById("poruka").value;
+
+    // Kreiranje novog reda u tabeli
+    const noviRed = document.createElement("tr");
+
+    noviRed.innerHTML = `
+        <td>${ime}</td>
+        <td>${email}</td>
+        <td>${poruka}</td>
+        <td><button class="btn-obrisi">Obriši</button></td>
+    `;
+
+    // Dodavanje reda u tbody
+    tabelaBody.appendChild(noviRed);
+
+    // Resetovanje forme nakon slanja
+    forma.reset();
+    
+    alert("Korisnik uspešno dodat u tabelu!");
+});
+
 
