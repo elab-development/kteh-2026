@@ -195,4 +195,18 @@ forma.addEventListener("submit", function(event) {
     alert("Korisnik uspešno dodat u tabelu!");
 });
 
+// EventListener za brisanje korisnika iz tabele (Event Delegation)
+tabelaBody.addEventListener("click", function(event) {
+    // Proveravamo da li je kliknuto baš na dugme za brisanje
+    if (event.target.classList.contains("btn-obrisi")) {
+        // confirm() vraća true ili false
+        const potvrda = confirm("Da li ste sigurni da želite da obrišete ovaj red?");
+        
+        if (potvrda) {
+            // event.target je dugme, .parentElement je <td>, a njegov .parentElement je <tr>
+            const redZaBrisanje = event.target.parentElement.parentElement;
+            redZaBrisanje.remove();
+        }
+    }
+});
 
