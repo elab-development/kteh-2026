@@ -113,5 +113,5 @@ class Student{
     }
 }
 
-let student1 = new Student("Petar", "Petrovic","pp20250001");
+let student1 = new Student("Petar", "Petrovic", "pp20250001");
 student1.ispisi();

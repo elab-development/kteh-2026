@@ -86,5 +86,5 @@ class Student {
         console.log("Ime studenta je: " + this.ime);
     }
 }
-let student = new Student("Petar", "Petrovic", "pp20250001");
+
 student.ispisi();
